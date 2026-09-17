@@ -13,7 +13,7 @@ function metricCard(label, value, note = '', accent = false, delta = null, rate 
 }
 
 function overview() {
-  const status = [['Open', snapshot.open, ''], ['Contacted', snapshot.contacted, 'orange'], ['Qualified', snapshot.qualifiedCurrent, 'lime'], ['Converted', snapshot.converted, 'navy'], ['Disqualified', snapshot.disqualified, '']];
+  const status = [['Open', snapshot.open, ''], ['Contacted', snapshot.contacted, 'orange'], ['Qualified', snapshot.qualifiedCurrent, 'lime'], ['Disqualified', snapshot.disqualified, ''], ['Converted', snapshot.converted, 'navy']];
   const max = Math.max(...status.map(([, value]) => value));
   const statusTotal = status.reduce((sum, [, value]) => sum + value, 0);
   const funnel = [['Lead', snapshot.total, '100%', '', snapshot.total - snapshot.previous.total], ['Activity', snapshot.activity, `${(snapshot.activity / snapshot.total * 100).toFixed(1)}%`, `${(snapshot.activity / snapshot.total * 100).toFixed(1)}%`, snapshot.activity - snapshot.previous.activity], ['Qualified', snapshot.qualified, `${(snapshot.qualified / snapshot.total * 100).toFixed(1)}%`, `${(snapshot.qualified / snapshot.activity * 100).toFixed(1)}%`, snapshot.qualified - snapshot.previous.qualified], ['Converted', snapshot.converted, `${(snapshot.converted / snapshot.total * 100).toFixed(1)}%`, `${(snapshot.converted / snapshot.qualified * 100).toFixed(1)}%`, snapshot.converted - snapshot.previous.converted]];
