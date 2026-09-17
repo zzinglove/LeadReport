@@ -2,6 +2,7 @@ export const snapshot = {
   date: '2026-09-09',
   label: '2026년 9월 9일 업로드본',
   total: 380,
+  activity: 84,
   open: 50,
   contacted: 27,
   qualified: 7,

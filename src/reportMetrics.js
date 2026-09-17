@@ -15,6 +15,8 @@ export function calculateReportMetrics(rows) {
 
   return {
     total: rows.length,
+    activity: (statuses.Open ?? 0) + (statuses.Contacted ?? 0) + (statuses.Qualified ?? 0),
+    qualified: statuses.Qualified ?? 0,
     pipeline,
     converted,
     conversionRate: rows.length ? Math.round((converted / rows.length) * 1000) / 10 : 0,
