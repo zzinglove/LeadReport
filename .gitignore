@@ -7,6 +7,6 @@ node_modules/
 .env
 .env.*
 !.env.example
-dist/
+# Build output is the static website published from this repository.
 build/
 .DS_Store

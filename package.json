@@ -1,0 +1,10 @@
+{
+  "name": "fy26-sfdc-lead-report",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check dist/app.js"
+  }
+}

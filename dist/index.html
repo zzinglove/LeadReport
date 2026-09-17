@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FY26 SFDC Lead 주차별·월도별 내부 웹 리포트" />
+    <title>FY26 SFDC Lead 웹 리포트</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">L</span><span>Lead Pulse</span></div>
+        <div class="topbar-meta"><span class="secure-dot"></span> 내부 전용 · 마지막 반영 2026.09.09</div>
+      </header>
+      <section class="workspace">
+        <aside class="sidebar">
+          <div class="eyebrow">FY26 / SFDC</div>
+          <h1>Lead<br /><em>웹 리포트</em></h1>
+          <p class="sidebar-copy">스냅샷 기준으로 Lead 흐름과 전환 성과를 확인합니다.</p>
+          <nav class="nav" aria-label="리포트 메뉴">
+            <button class="nav-item active" data-view="overview">Overview <span>01</span></button>
+            <button class="nav-item" data-view="weekly">주차별 관리 <span>02</span></button>
+            <button class="nav-item" data-view="monthly">월도별 관리 <span>03</span></button>
+            <button class="nav-item" data-view="business">Business / 제품 <span>04</span></button>
+          </nav>
+          <div class="sidebar-footer"><span class="avatar">MH</span><div><strong>미현 우</strong><small>DT Sales · 일반 사용자</small></div></div>
+        </aside>
+        <section class="content">
+          <div class="content-head">
+            <div><p class="eyebrow">PERFORMANCE OVERVIEW</p><h2 id="view-title">FY26 Lead 현황</h2></div>
+            <label class="snapshot-control">기준 스냅샷<select id="snapshot-select"><option value="2026-09-09">2026.09.09</option><option value="2026-09-02">2026.09.02</option><option value="2026-08-26">2026.08.26</option></select></label>
+          </div>
+          <div id="view-root"></div>
+        </section>
+      </section>
+    </main>
+    <div id="detail-dialog" class="dialog-backdrop" hidden><div class="dialog" role="dialog" aria-modal="true"><button id="dialog-close" class="dialog-close" aria-label="닫기">×</button><span class="lock-icon">▣</span><p class="eyebrow">ORGANIZATION ACCESS</p><h3>Lead 상세 데이터 접근 권한이 없습니다.</h3><p>조직별 Summary 수치는 모두 볼 수 있지만, 고객명 등 원본 Lead Data는 권한이 부여된 Organization Level 2만 조회할 수 있습니다.</p><button id="dialog-ok" class="primary-button">확인</button></div></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
