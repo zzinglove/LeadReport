@@ -1,5 +1,5 @@
 export const snapshot = {
-  date: '2026-09-09', label: '2026년 9월 9일 업로드본', total: 380, activity: 84, open: 50, contacted: 27, qualified: 157, qualifiedCurrent: 7, disqualified: 146, converted: 150, conversionRate: 39.5, pipeline: 421625671, currency: 'KRW',
+  date: '2026-09-09', label: '2026년 9월 9일 업로드본', total: 380, activity: 330, open: 50, contacted: 27, qualified: 157, qualifiedCurrent: 7, disqualified: 146, converted: 150, conversionRate: 39.5, pipeline: 421625671, currency: 'KRW',
   weekly: [{period:'08/17–08/23',leads:34,converted:12,pipeline:58.4},{period:'08/24–08/30',leads:48,converted:21,pipeline:72.1},{period:'08/31–09/06',leads:61,converted:26,pipeline:91.8},{period:'09/07–09/13',leads:39,converted:18,pipeline:64.3}],
   monthly: [{period:'2026년 4월',leads:72,converted:28,pipeline:68.2},{period:'2026년 5월',leads:86,converted:34,pipeline:88.6},{period:'2026년 6월',leads:91,converted:38,pipeline:105.4},{period:'2026년 7월',leads:78,converted:31,pipeline:82.5},{period:'2026년 8월',leads:53,converted:19,pipeline:76.9}],
   businesses: [{name:'DT',description:'Multi-Function Device, Printer, Supplies & paper',value:172,share:45},{name:'GC',description:'Production Press',value:74,share:19},{name:'BS',description:'IT Services, Software, Business Solutions, Business Service',value:101,share:27},{name:'ETC',description:'Others',value:33,share:9}],

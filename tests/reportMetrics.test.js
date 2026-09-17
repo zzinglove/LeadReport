@@ -13,7 +13,7 @@ test('calculates PPT-style headline metrics from lead rows', () => {
 
   assert.deepEqual(calculateReportMetrics(rows), {
     total: 5,
-    activity: 3,
+    activity: 4,
     qualified: 2,
     pipeline: 630,
     converted: 1,
