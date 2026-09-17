@@ -1,0 +1,12 @@
+# Source files contain customer and internal Salesforce data.
+FY26 SFDC Lead report 20260909.pptx
+report1789101088340.xls.xlsx
+
+# Local/runtime files
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+build/
+.DS_Store
