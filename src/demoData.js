@@ -11,6 +11,7 @@ export const snapshot = {
   converted: 150,
   conversionRate: 39.5,
   pipeline: 421625671,
+  previous: { total: 350, activity: 306, qualified: 136, converted: 128, conversionRate: 36.6 },
   currency: 'KRW',
   weekly: [
     { period: '08/17–08/23', leads: 34, converted: 12, pipeline: 58.4 },

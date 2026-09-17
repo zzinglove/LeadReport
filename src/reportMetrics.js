@@ -1,3 +1,9 @@
+export function calculateChange(current, previous, percentagePoints = false) {
+  const delta = Math.round((current - previous) * 10) / 10;
+  if (percentagePoints) return { delta, rate: null };
+  return { delta, rate: previous ? Math.round((delta / previous) * 1000) / 10 : null };
+}
+
 export function calculateReportMetrics(rows) {
   const statuses = {};
   const businesses = {};

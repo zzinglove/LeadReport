@@ -1,6 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { calculateReportMetrics } from '../src/reportMetrics.js';
+import { calculateReportMetrics, calculateChange } from '../src/reportMetrics.js';
+
+test('calculates week-over-week count and percentage-point changes', () => {
+  assert.deepEqual(calculateChange(380, 350), { delta: 30, rate: 8.6 });
+  assert.deepEqual(calculateChange(39.5, 36.6, true), { delta: 2.9, rate: null });
+});
 
 test('calculates PPT-style headline metrics from lead rows', () => {
   const rows = [
