@@ -1,6 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { calculateReportMetrics, calculateChange } from '../src/reportMetrics.js';
+import { calculateReportMetrics, calculateChange, calculateStatusShares } from '../src/reportMetrics.js';
+
+test('calculates each lead status share from the full lead total', () => {
+  assert.deepEqual(calculateStatusShares({ Open: 50, Contacted: 27, Qualified: 7, Disqualified: 146, Converted: 150 }), {
+    Open: 13.2, Contacted: 7.1, Qualified: 1.8, Disqualified: 38.4, Converted: 39.5
+  });
+});
 
 test('calculates week-over-week count and percentage-point changes', () => {
   assert.deepEqual(calculateChange(380, 350), { delta: 30, rate: 8.6 });

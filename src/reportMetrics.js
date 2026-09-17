@@ -4,6 +4,11 @@ export function calculateChange(current, previous, percentagePoints = false) {
   return { delta, rate: previous ? Math.round((delta / previous) * 1000) / 10 : null };
 }
 
+export function calculateStatusShares(statuses) {
+  const total = Object.values(statuses).reduce((sum, value) => sum + value, 0);
+  return Object.fromEntries(Object.entries(statuses).map(([status, value]) => [status, total ? Math.round((value / total) * 1000) / 10 : 0]));
+}
+
 export function calculateReportMetrics(rows) {
   const statuses = {};
   const businesses = {};
